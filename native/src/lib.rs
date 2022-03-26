@@ -963,6 +963,14 @@ pub fn grin_chain_height(mut cx: FunctionContext) -> JsResult<JsString> {
     result_to_jsresult(cx, res)
 }
 
+// #[no_mangle]
+pub fn grin_chain_filter(mut cx: FunctionContext) -> JsResult<JsString> {
+    let json_cfg = cx.argument::<JsString>(0)?.value();
+
+    let res = grin_chain_filter(&json_cfg);
+    result_to_jsresult(cx, res)
+}
+
 register_module!(mut cx, {
     cx.export_function("grinCheckPassword", grin_check_password)?;
     cx.export_function("grinWalletChangePassword", grin_wallet_change_password)?;
