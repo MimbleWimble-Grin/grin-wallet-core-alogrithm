@@ -1,8 +1,4 @@
-# grinwallet-nodejs
-
-Grin Wallet Node.js APIs for Mac/Windows/Linux desktop App development.
-
-# Contributing
+# grin-core-algorithm
 
 ## Requirements
 
